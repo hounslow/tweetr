@@ -17,7 +17,19 @@ $("form").on("submit", function(event){
     event.preventDefault();
     alert("Empty post");
   } else {
+    event.preventDefault();
     console.log($(this).serialize());
+
+    var form = this;
+
+    $.ajax({
+      url: '/tweets',
+      method: 'post',
+      data: $(form).serialize()
+    }).done(function () {
+      form.reset();
+      loadTweets();
+    });
   }
 });
 
@@ -28,7 +40,7 @@ function loadTweets(){
 
 function renderTweets(tweets) {
   for (tweet in tweets){
-    $('section.tweets').append($(createTweetElement(tweets[tweet])));
+    $('section.tweets').prepend($(createTweetElement(tweets[tweet])));
   }
 }
 
