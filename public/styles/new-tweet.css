@@ -17,6 +17,28 @@ article.tweet {
  border: 1px solid #cccaca;
  border-radius: 2px;
  margin: 10px 25px;
+ position: relative;
+}
+
+article.tweet:hover i {
+  display: inline-block;
+}
+
+article.tweet:hover .overlay {
+  display: none;
+}
+
+footer.tweet-footer i {
+  display: none;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.44);
 }
 
 header.tweet-header{
@@ -55,11 +77,22 @@ p.tweet-body {
   width: 100%;
 }
 
+i {
+  padding: 0px 2px;
+}
+
 footer.tweet-footer {
   padding: 10px;
   background: white;
   border-top: 1px solid #cccaca;
   font-size: 12px;
+  display: flex;
+}
+
+p.date {
+  margin: 0px;
+  flex-grow: 1;
+  display: inline-block;
 }
 
 h2.compose-tweet {

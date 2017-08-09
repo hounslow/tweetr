@@ -19,6 +19,9 @@
     <!-- New-Tweet CSS -->
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
 
+    <!--  Font Awesome -->
+    <script src="https://use.fontawesome.com/e7a3dd7717.js"></script>
+
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
 
@@ -51,13 +54,19 @@
 
       <section class="tweets">
         <article class="tweet">
+          <div class="overlay"></div>
           <header class="tweet-header">
             <img class="profile-pic" src="/images/userimg.jpg">
             <h2 class="username">Matthew Hounslow</h2>
             <h3 class="tag-name">@Hounslow</h3>
           </header>
           <p class="tweet-body">Hello this is the the random tweet that will show up in order to test stuff! </p>
-          <footer class="tweet-footer">Date of Post</footer>
+          <footer class="tweet-footer">
+            <p class="date">10 days ago</p>
+            <i class="fa fa-flag" aria-hidden="true"></i>
+            <i class="fa fa-heart" aria-hidden="true"></i>
+            <i class="fa fa-retweet" aria-hidden="true"></i>
+          </footer>
         </article>
       </section>
     </main>
