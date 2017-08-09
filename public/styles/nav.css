@@ -1,0 +1,30 @@
+nav {
+ background: #00a087;
+ height: 80px;
+ line-height: 100px;
+ padding-left: 2em;
+ padding-right: 2em;
+ padding-top: 0;
+ padding-bottom: 0;
+ font-family: inherit;
+ width: 100%;
+ position: fixed;
+ top: 0;
+}
+
+#nav-bar .header {
+  color: #e8fdff;
+  font-size: 32px; 
+  font-style: normal;
+  float: left;
+  height: 80px;
+  width: 100px;
+}
+
+#nav-bar .logo {
+  display: inline;
+  float: left;
+  height: 80px;
+  width: 80px; 
+}
+

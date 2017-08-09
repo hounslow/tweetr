@@ -7,26 +7,59 @@
     <!-- External CSS -->
     <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
 
+    <!-- Roboto Condensed Font -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,700,700i" rel="stylesheet">
+
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+
+    <!-- Nav CSS -->
+    <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+
+    <!-- New-Tweet CSS -->
+    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
 
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/app.js"></script>
+
+    <!-- Character Count JS -->
+    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
   </head>
 
   <body>
 
     <!-- Top nav bar (fixed) -->
     <nav id="nav-bar">
-      <img class="logo" src="/images/bird.png" width="80px" height="80px">
+      <img class="logo" src="/images/bird.png">
       <span class="header">Tweeter</span>
-    </nav>
+    </nav
+
 
     <!-- Page-specific (main) content here -->
     <main class="container">
+      <section class="new-tweet">
+        <h2 class="compose-tweet">Compose Tweet</h2>
+        <form method="POST" action="/tweets">
+          <textarea name="text" placeholder="What are you humming about?"></textarea>
+          <input type="submit" value="Tweet">
+          <span class="counter">140</span>
+        </form>
+      </section>
+
+      <section class="tweets">
+        <article class="tweet">
+          <header class="tweet-header">
+            <img class="profile-pic" src="/images/userimg.jpg">
+            <h2 class="username">Matthew Hounslow</h2>
+            <h3 class="tag-name">@Hounslow</h3>
+          </header>
+          <p class="tweet-body">Hello this is the the random tweet that will show up in order to test stuff! </p>
+          <footer class="tweet-footer">Date of Post</footer>
+        </article>
+      </section>
     </main>
 
   </body>
