@@ -53,7 +53,7 @@ var data = [
 
 function renderTweets(tweets) {
   for (tweet in tweets){
-    $('#tweets').append($(createTweetElement(tweet)));
+    $('section.tweets').append($(createTweetElement(tweets[tweet])));
   }
 }
 
@@ -83,8 +83,8 @@ function createTweetElement(tweet) {
   return html;
 }
 
-createTweetElement(data[0]);
- // console.log(tweet);
+renderTweets(data);
+// console.log(tweet);
 
 // renderTweets(data);
 
