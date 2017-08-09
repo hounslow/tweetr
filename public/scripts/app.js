@@ -57,6 +57,12 @@ function renderTweets(tweets) {
   }
 }
 
+function escape(str) {
+  var div = document.createElement('div');
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+}
+
 function createTweetElement(tweet) {
   const image = tweet.user.avatars.small;
   const username = tweet.user.name;
@@ -68,12 +74,12 @@ function createTweetElement(tweet) {
       <div class="overlay"></div>
       <header class="tweet-header">
         <img class="profile-pic" src=${image}>
-        <h2 class="username">${username}</h2>
-        <h3 class="tag-name">${handle}</h3>
+        <h2 class="username">${escape(username)}</h2>
+        <h3 class="tag-name">${escape(handle)}</h3>
       </header>
-      <p class="tweet-body">${content}</p>
+      <p class="tweet-body">${escape(content)}</p>
       <footer class="tweet-footer">
-        <p class="date">${date}</p
+        <p class="date">${date}</p>
         <i class="fa fa-flag" aria-hidden="true"></i>
         <i class="fa fa-heart" aria-hidden="true"></i>
         <i class="fa fa-retweet" aria-hidden="true"></i>
@@ -83,8 +89,4 @@ function createTweetElement(tweet) {
   return html;
 }
 
-renderTweets(data);
-// console.log(tweet);
-
-// renderTweets(data);
 
