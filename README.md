@@ -15,3 +15,14 @@ This repository is the starter code for the project: Students will fork and clon
 
 - Express
 - Node 5.10.x or above
+- Sass 
+- Mongo DB
+- Chance
+- md5
+
+1. npm install --save
+2. gem install sass
+
+## Running the project
+
+1. npm run local
