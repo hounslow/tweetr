@@ -6,6 +6,13 @@
 $(function(){
 
 
+$(".compose-button").on("click", function(){
+  $(".new-tweet").toggle('fast');
+  //if (!$('.new-tweet').is(":visible")){
+    $(".text-box").focus();
+  //}
+});
+
 $("form").on("submit", function(event){
   let wordLength = $(".new-tweet").find("textarea").val().length;
   const charLimit = 140;
