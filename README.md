@@ -15,7 +15,7 @@ This repository is the starter code for the project: Students will fork and clon
 
 - Express
 - Node 5.10.x or above
-- Sass 
+- Sass
 - Mongo DB
 - Chance
 - md5
@@ -23,6 +23,11 @@ This repository is the starter code for the project: Students will fork and clon
 1. npm install --save
 2. gem install sass
 
+## Screenshots
+
+!["Screenshot of the compose tweet box"](https://github.com/hounslow/tweetr/blob/master/docs/tweet-compose.png)
+!["Screenshot of hover effect on tweet post"](https://github.com/hounslow/tweetr/blob/master/docs/tweet-post-selected.png)
+!["Screenshot of many tweet posts, ordered of date of post](https://github.com/hounslow/tweetr/blob/master/docs/tweet-posts.png)
 ## Running the project
 
 1. npm run local
