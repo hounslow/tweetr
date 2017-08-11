@@ -1,0 +1,139 @@
+@mixin borders($radius:5px, $color:grey) {
+  border: 1px solid $color;
+  border-radius: $radius;
+}
+
+
+section {
+  &.new-tweet {
+    background: #e2e2e2;
+    padding-right: 10px;
+    padding-left: 10px;
+    @include borders;
+  }
+  &.tweets {
+    background: #ffffff;
+    margin-top: 20px;
+    @include borders;
+  }
+}
+
+article {
+  &.tweet {
+   @include borders(2px, #cccaca);
+   margin: 15px 25px;
+   position: relative;
+  }
+  &.tweet:hover {
+    i {
+    display: inline-block;
+    }
+  }
+  &.tweet:hover {
+    .overlay {
+      display: none;
+    }
+  }
+}
+
+footer {
+  &.tweet-footer {
+      i {
+      display: none;
+    }
+  }
+  &.tweet-footer {
+    padding: 10px;
+    background: white;
+    border-top: 1px solid #cccaca;
+    font-size: 12px;
+    display: flex;
+  }
+}
+
+h2 {
+  &.username {
+    align-self: flex-start;
+    margin: 0px;
+    font-size: 21px;
+    flex-grow: 1;
+  }
+  &.compose-tweet {
+    border-bottom: 1px solid black;
+  }
+}
+
+p {
+  &.tweet-body {
+    padding: 30px 10px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    background: white;
+    width: 100%;
+  }
+  &.date {
+    margin: 0px;
+    flex-grow: 1;
+    display: inline-block;
+  }
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.44);
+}
+
+header {
+  &.tweet-header{
+    padding: 10px;
+    background: #f3f0f0;
+    display: flex;
+    align-items: center;
+  }
+}
+
+h3 {
+  &.tag-name {
+    font-weight: 200;
+    color: grey;
+    font-size: 13px;
+  }
+}
+
+img {
+  &.profile-pic {
+    height: 50px;
+    width: 50px;
+    margin-right: 10px;
+    border: 1px none;
+    border-radius: 5px;
+  }
+}
+
+i {
+  padding: 0px 2px;
+}
+
+textarea {
+  resize: vertical;
+  width: 364px  ;
+  padding-top: 5px;
+  padding-left: 5px;
+}
+
+form {
+  padding-bottom: 10px;
+  width: 380px;
+}
+
+span {
+  float: right;
+  font-size: 12px;
+  padding-right: 20px;
+  font-family: inherit;
+  font-style: italic;
+}

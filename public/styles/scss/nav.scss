@@ -1,0 +1,45 @@
+nav {
+   background: #00a087;
+   height: 80px;
+   line-height: 100px;
+   padding: 0 2em;
+   font-family: inherit;
+   width: 100%;
+   position: fixed;
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   top: 0;
+   z-index: 9;
+
+   &#nav-bar {
+      .compose-button {
+          width: 100px;
+          height: 60px;
+          border: 1px solid black;
+          border-radius: 5px;
+          background: azure;
+          color: darkcyan;
+          text-align: center;
+          font-size: 22px;
+          line-height: 1px;
+     }
+      .header {
+          color: #e8fdff;
+          font-size: 32px;
+          font-style: normal;
+          flex-grow: 1;
+          height: 80px;
+          width: 100px;
+     }
+      .logo {
+          float: left;
+          height: 80px;
+          width: 80px;
+     }
+      .compose-button:hover {
+          background: white;
+          color: black;
+     }
+   }
+}
