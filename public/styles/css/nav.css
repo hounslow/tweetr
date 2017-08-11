@@ -1,13 +1,13 @@
+.logo, .header, nav, #nav-bar.compose-button {
+  height: 80px;
+  width: 100px; }
+
 nav {
   background: #00a087;
-  height: 80px;
-  line-height: 100px;
-  padding-left: 2em;
-  padding-right: 2em;
-  padding-top: 0;
-  padding-bottom: 0;
-  font-family: inherit;
   width: 100%;
+  line-height: 100px;
+  padding: 0 2em;
+  font-family: inherit;
   position: fixed;
   display: flex;
   flex-direction: row;
@@ -15,7 +15,6 @@ nav {
   top: 0;
   z-index: 9; }
   nav#nav-bar .compose-button {
-    width: 100px;
     height: 60px;
     border: 1px solid black;
     border-radius: 5px;
@@ -28,12 +27,9 @@ nav {
     color: #e8fdff;
     font-size: 32px;
     font-style: normal;
-    flex-grow: 1;
-    height: 80px;
-    width: 100px; }
+    flex-grow: 1; }
   nav#nav-bar .logo {
     float: left;
-    height: 80px;
     width: 80px; }
   nav#nav-bar .compose-button:hover {
     background: white;
