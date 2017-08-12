@@ -7,10 +7,8 @@ $(function(){
 
 
 $(".compose-button").on("click", function(){
-  $(".new-tweet").toggle('fast');
-  //if (!$('.new-tweet').is(":visible")){
+  $(".new-tweet").slideToggle('fast');
     $(".text-box").focus();
-  //}
 });
 
 $("form").on("submit", function(event){
@@ -18,14 +16,10 @@ $("form").on("submit", function(event){
   const charLimit = 140;
   const newValue = charLimit - wordLength;
   if (newValue < 0) {
-    event.preventDefault();
     alert("Too many characters!");
   } else if (newValue === charLimit){
-    event.preventDefault();
     alert("Empty post");
   } else {
-    event.preventDefault();
-    console.log($(this).serialize());
 
     var form = this;
 
@@ -38,6 +32,7 @@ $("form").on("submit", function(event){
       loadTweets();
     });
   }
+  event.preventDefault();
 });
 
 function loadTweets(){

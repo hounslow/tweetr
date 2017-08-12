@@ -1,5 +1,5 @@
 $(function() {
-  $('textarea').on("keyup", function(event){
+  $('textarea').on("input", function(event){
     let wordLength = $(".new-tweet").find("textarea").val().length;
     const charLimit = 140;
     const newValue = charLimit - wordLength;
